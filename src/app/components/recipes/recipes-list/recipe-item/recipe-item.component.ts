@@ -1,6 +1,8 @@
 import { IcuPlaceholder } from '@angular/compiler/src/i18n/i18n_ast';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 import { Recipe } from '../Recipe';
+import {ShareService} from '../../service/share.service';
 
 @Component({
   selector: 'app-recipe-item',
@@ -15,7 +17,7 @@ export class RecipeItemComponent implements OnInit {
   @Input() odd: boolean;
   @Output() imageClicked: EventEmitter<string> = new EventEmitter<string>();
 
-  constructor() {
+  constructor(private shareService: ShareService) {
     this.recipe = {
       name: '',
       description: '',
@@ -29,6 +31,6 @@ export class RecipeItemComponent implements OnInit {
   }
 
   onImageClicked(): void {
-    this.imageClicked.emit(this.recipe.name)
+    this.shareService.changeMessage(this.recipe)
   }
 }

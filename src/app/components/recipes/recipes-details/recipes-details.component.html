@@ -1,1 +1,8 @@
-<p>recipes-details works!</p>
+<div>
+    <div *ngIf="recipe.name.length > 0; else elseBlock">
+        <p>{{recipe.name}}</p>
+        <p>{{recipe.description}}</p>
+        <img class='recipeImage' [src]="recipe.imagePath"/>
+    </div>
+    <ng-template #elseBlock>Pick a recipe from the list</ng-template>
+</div>
