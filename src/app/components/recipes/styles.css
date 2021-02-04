@@ -1,0 +1,9 @@
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+.container{
+height: calc(100vh - 108px);
+overflow: hidden;
+}
