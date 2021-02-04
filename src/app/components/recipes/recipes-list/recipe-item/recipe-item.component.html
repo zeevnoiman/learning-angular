@@ -1,0 +1,5 @@
+<div [ngClass]="{oddItem: odd, evenItem: even}">
+    <p>{{recipe.name}}</p>
+    <p>{{recipe.description}}</p>
+    <img (click)="onImageClicked()" class='recipeImage' [src]="recipe.imagePath"/>
+</div>

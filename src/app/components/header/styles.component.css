@@ -1,0 +1,16 @@
+.header{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: solid 1px #333 
+}
+
+.header-button-box{
+    padding: 10px;
+}
+
+.header-button{
+    margin: 8px;
+    padding: 8px;
+}
