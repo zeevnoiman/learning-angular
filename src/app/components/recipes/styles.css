@@ -3,7 +3,8 @@ main{
     flex-direction: row;
 }
 
-.container{
-height: calc(100vh - 108px);
-overflow: hidden;
+.detail-container{
+    flex: 3;
+    height: calc(100vh - 101px);
+    overflow: auto;
 }

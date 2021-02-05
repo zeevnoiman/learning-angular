@@ -1,7 +1,3 @@
-.detail-container{
-    height: calc(100vh-110px);
-    overflow: hidden;
-}
 .recipeImage{
     height: 500px;
     width: auto;

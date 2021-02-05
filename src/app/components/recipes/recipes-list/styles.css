@@ -1,4 +1,10 @@
+
 section{
+    height: calc(100vh - 101px);
     overflow: auto;
-    height: calc(100vh - 108px);
+}
+
+.items-container{
+    height: 100%;
+    overflow: auto;
 }

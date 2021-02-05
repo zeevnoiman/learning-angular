@@ -1,3 +1,5 @@
 <section>
-    <app-recipe-item *ngFor="let recipe of recipes; even as even; odd as odd" [recipe]="recipe" [even]="even" [odd]="odd" ></app-recipe-item>
+    <div class="items-container">
+        <app-recipe-item *ngFor="let recipe of recipes; even as even; odd as odd" [recipe]="recipe" [even]="even" [odd]="odd" ></app-recipe-item>
+    </div>
 </section>
