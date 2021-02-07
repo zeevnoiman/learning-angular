@@ -21,7 +21,7 @@ export class RecipeItemComponent implements OnInit {
     this.recipe = {
       name: '',
       description: '',
-      imagePath: ''
+      imagePath: '',
     };
     this.even = false;
     this.odd = false;

@@ -1,1 +1,16 @@
-<p>shopping-list-add works!</p>
+<form (ngSubmit)="onSubmit()" #ingredientForm="ngForm">
+    <div class="inputBox">
+        <label for="ingredient">Ingredient: </label>
+        <input [(ngModel)]="ingredient" required name="ingredient" type="text">
+    </div>
+    <div class="inputBox">
+        <label for="amount">Amount: </label>
+        <input [(ngModel)]="amount" required min=1 max=100 name="amount" type="number">
+    </div>
+    <div class="inputBox">
+        <input 
+        [disabled]="!ingredientForm.form.valid" 
+        type="submit" 
+        value="Add">
+    </div>
+</form>

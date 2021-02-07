@@ -1,1 +1,5 @@
-<p>shopping-list works!</p>
+<div *ngFor="let ingredient of ingredients" >
+    <p>{{ingredient.name}}</p>
+    <p>{{ingredient.amount}}</p>
+</div>
+<app-shopping-list-add></app-shopping-list-add>

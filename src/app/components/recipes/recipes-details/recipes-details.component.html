@@ -1,7 +1,12 @@
 
 <div *ngIf="recipe.name.length > 0; else elseBlock">
+    <button (click)="addToShoppingList()">+</button>
     <p>{{recipe.name}}</p>
     <p>{{recipe.description}}</p>
     <img class='recipeImage' [src]="recipe.imagePath"/>
+    <div *ngFor="let ingredient of recipe.ingredients">
+        <p>{{ingredient.name}}</p>
+        <p>{{ingredient.amount}}</p>
+    </div>
 </div>
 <ng-template #elseBlock>Pick a recipe from the list</ng-template>
