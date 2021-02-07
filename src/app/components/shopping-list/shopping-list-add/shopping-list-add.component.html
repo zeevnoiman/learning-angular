@@ -1,16 +1,22 @@
-<form (ngSubmit)="onSubmit()" #ingredientForm="ngForm">
-    <div class="inputBox">
-        <label for="ingredient">Ingredient: </label>
-        <input [(ngModel)]="ingredient" required name="ingredient" type="text">
-    </div>
-    <div class="inputBox">
-        <label for="amount">Amount: </label>
-        <input [(ngModel)]="amount" required min=1 max=100 name="amount" type="number">
-    </div>
-    <div class="inputBox">
-        <input 
-        [disabled]="!ingredientForm.form.valid" 
-        type="submit" 
-        value="Add">
-    </div>
-</form>
+<h2 mat-dialog-title>Add Ingredient</h2>
+<mat-dialog-content>
+    <form (ngSubmit)="onSubmit()" #ingredientForm="ngForm">
+        <div class="inputBox">
+            <input class="inputText" placeholder="Ingredient..." [(ngModel)]="ingredient" required name="ingredient" type="text">
+        </div>
+        <div class="inputBox">
+            <label for="amount">Amount:</label>
+            <input class="inputNumber" [(ngModel)]="amount" required min=1 max=100 name="amount" type="number">
+        </div>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button 
+    mat-button
+    [mat-dialog-close]="true"
+    cdkFocusInitial
+    [disabled]="!ingredientForm.form.valid"
+    (click)="onSubmit()" 
+    >Add</button>
+  </mat-dialog-actions>

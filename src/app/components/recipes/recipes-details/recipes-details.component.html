@@ -1,12 +1,27 @@
-
-<div *ngIf="recipe.name.length > 0; else elseBlock">
-    <button (click)="addToShoppingList()">+</button>
-    <p>{{recipe.name}}</p>
-    <p>{{recipe.description}}</p>
-    <img class='recipeImage' [src]="recipe.imagePath"/>
-    <div *ngFor="let ingredient of recipe.ingredients">
-        <p>{{ingredient.name}}</p>
-        <p>{{ingredient.amount}}</p>
+<div class="detailContainer" *ngIf="recipe.name.length > 0; else elseBlock">
+    <div class="detailsBox">
+        <p class="name">{{recipe.name}}</p>
+        <p class="description">{{recipe.description}}</p>
+        <img class='recipeImage' [src]="recipe.imagePath"/>
+    </div>
+    <div class="ingredientsBox">
+        <button class="mat-fab addButton" (click)="addToShoppingList()">+</button>
+        <h2 class="ingredientsTitle">Ingredients</h2>
+        <div *ngFor="let ingredient of recipe.ingredients">
+            <li>
+                {{ingredient.name}} x
+                {{ingredient.amount}}
+            </li>
+        </div>
     </div>
 </div>
-<ng-template #elseBlock>Pick a recipe from the list</ng-template>
+<ng-template #elseBlock>
+    <div class="defaultContainer">
+        <span class="material-icons icon-arrow">
+            keyboard_backspace
+        </span>
+        <p class="defaultText">
+            Pick a recipe from the list
+        </p>
+    </div>
+</ng-template>

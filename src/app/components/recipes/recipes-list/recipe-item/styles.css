@@ -1,14 +1,40 @@
 
 .oddItem{
-    background-color: #fff;
 }
 
 
 .evenItem{
+    background-color: rgb(241, 57, 57);
+}
 
-}    
+.item{
+    padding-top: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.evenItem .name{
+    font-size: 24px;
+    padding: 5px;
+    color: #fff;
+}
+
+.oddItem .name{
+    font-size: 24px;
+    padding: 5px;
+    color: rgb(2, 2, 43);
+}
+
+.description{
+    margin-left: 15px;
+}
 
 .recipeImage{
-    height: 300px;
-    width: 300px;
+    align-self: center;
+    margin-bottom: 8px;
+    border-radius: 100px;
+    width: 340px;
+    height: auto;
 }

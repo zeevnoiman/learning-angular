@@ -1,5 +1,5 @@
-<div [ngClass]="{oddItem: odd, evenItem: even}">
-    <p>{{recipe.name}}</p>
-    <p>{{recipe.description}}</p>
+<div [ngClass]="{oddItem: odd, evenItem: even, item: true}">
+    <p class="name">{{recipe.name}}</p>
+    <p class="description">{{recipe.description}}</p>
     <img (click)="onImageClicked()" class='recipeImage' [src]="recipe.imagePath"/>
 </div>

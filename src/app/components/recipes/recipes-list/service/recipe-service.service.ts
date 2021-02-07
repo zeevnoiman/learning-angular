@@ -12,9 +12,9 @@ export class RecipeService {
   getRecipes():Recipe[]{
     return [
       {
-        name : 'sugar, salt, vinagger',
-        description : 'A good salat sauce',
-        imagePath: 'https://kaloriengeniessen.de/wp-content/uploads/2019/08/Einfache-Salat-Dressings-unter-100-Kalorien-4-1-683x1024.jpg',
+        name : 'Silverbeet fatteh with sumac yoghurt and chickpeas',
+        description : 'Try this dish with roast cauliflower, eggplant or roast pumpkin instead of silverbeet for a variation," says Tom Walton. Begin this recipe 1 day ahead',
+        imagePath: 'https://img.delicious.com.au/Li2A8QDR/w759-h506-cfill/del/2020/09/silverbeet-fatteh-with-sumac-yoghurt-and-chickpeas-139202-1.jpg',
         ingredients: [{
           name: 'sugar',
           amount: 2
@@ -49,9 +49,9 @@ export class RecipeService {
         }]
       },
       {
-        name : 'Barbecue',
-        description : 'A master barbecue',
-        imagePath: 'https://kaloriengeniessen.de/wp-content/uploads/2019/08/Einfache-Salat-Dressings-unter-100-Kalorien-4-1-683x1024.jpg',
+        name : 'The Full Monty burger',
+        description : 'This great Aussie burger from Lucy Tweed is a must-have at any barbecue.',
+        imagePath: 'https://img.delicious.com.au/rhJqDw_4/w759-h506-cfill/del/2021/01/the-full-monty-burger-144810-2.jpg',
         ingredients: [{
           name: 'sugar',
           amount: 6

@@ -1,5 +1,14 @@
-<div *ngFor="let ingredient of ingredients" >
-    <p>{{ingredient.name}}</p>
-    <p>{{ingredient.amount}}</p>
+<div class="container">
+    <h2>Shopping List</h2>
+    <div *ngIf="ingredients.length > 0; else elseBlock">
+        <li *ngFor="let ingredient of ingredients" >
+            {{ingredient.name}} x
+            {{ingredient.amount}}
+        </li>
+        <button (click)="saveToDB()" class="button-save" mat-raised-button color="primary">Save</button>
+    </div>
+    <ng-template #elseBlock>
+        <h3>Your list is empty :(</h3>
+    </ng-template>
+    <button class="mat-fab addButton" (click)="openDialog()">+</button>
 </div>
-<app-shopping-list-add></app-shopping-list-add>

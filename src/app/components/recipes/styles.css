@@ -3,8 +3,12 @@ main{
     flex-direction: row;
 }
 
+.list-container{
+    max-width: 400px;
+}
+
 .detail-container{
-    flex: 3;
+    width: 100%;
     height: calc(100vh - 101px);
     overflow: auto;
 }
